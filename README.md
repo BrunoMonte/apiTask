@@ -55,3 +55,19 @@ dotnet ef database update
 
 ```bash
 dotnet run
+
+---
+
+##  Acessando o Swagger
+
+Após iniciar a aplicação, abra seu navegador e acesse:
+
+```bash
+http://localhost:5212/swagger/index.html
+
+No Swagger você poderá testar todos os endpoints da API:
+
+✅ GET
+✅ POST
+✅ PUT
+✅ DELETE
