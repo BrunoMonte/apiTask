@@ -19,7 +19,7 @@ namespace TaskManagerAPI.Controllers
             _context = context;
         }
 
-        // GET: api/tarefas
+        
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Tarefa>>> GetAll()
         {
@@ -27,7 +27,7 @@ namespace TaskManagerAPI.Controllers
             return Ok(tarefas);
         }
 
-        // GET: api/tarefas/5
+        
         [HttpGet("{id}")]
         public async Task<ActionResult<Tarefa>> GetById(int id)
         {
@@ -39,7 +39,7 @@ namespace TaskManagerAPI.Controllers
             return Ok(tarefa);
         }
 
-        // POST: api/tarefas
+        
         [HttpPost]
         public async Task<ActionResult<Tarefa>> Create(CreateTarefaDto dto)
         {
@@ -57,7 +57,7 @@ namespace TaskManagerAPI.Controllers
             return CreatedAtAction(nameof(GetById), new { id = tarefa.Id }, tarefa);
         }
 
-        // PUT: api/tarefas/5
+        
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, Tarefa tarefa)
         {
@@ -74,7 +74,7 @@ namespace TaskManagerAPI.Controllers
             return NoContent();
         }
 
-        // DELETE: api/tarefas/5
+        
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
