@@ -43,18 +43,13 @@ namespace TaskManagerAPI.Controllers
         [HttpPost]
         public async Task<ActionResult<Tarefa>> Create(CreateTarefaDto dto)
         {
-            var tarefa = new Tarefa
-            {
-                Title = dto.Title,
-                Description = dto.Description,
-                Status = dto.Status ?? "Pendente",
-                DataCriacao = DateTime.Now
-            };
+            var tarefa = await _createTaskUseCase.ExecuteAsync(dto);
 
-            _context.Tarefas.Add(tarefa);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction(nameof(GetById), new { id = tarefa.Id }, tarefa);
+            return CreatedAtAction(
+                nameof(GetById),
+                new { id = tarefa.Id },
+                tarefa
+            );
         }
 
         
