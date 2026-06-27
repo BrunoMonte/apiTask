@@ -1,10 +1,18 @@
 using Microsoft.EntityFrameworkCore;
 using TaskManagerAPI.Data;
+using TaskManagerAPI.UseCases;
+using TaskManagerAPI.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Controllers
 builder.Services.AddControllers();
+
+builder.Services.AddScoped<ICreateTaskUseCase, CreateTaskUseCase>();
+
+//repository
+
+builder.Services.AddScoped<ITaskRepository, TaskRepository>();
 
 // Swagger
 builder.Services.AddEndpointsApiExplorer();
