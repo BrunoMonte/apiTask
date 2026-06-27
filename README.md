@@ -4,6 +4,23 @@ API REST desenvolvida para gerenciamento de tarefas diárias, permitindo criar, 
 
 ---
 
+## 🚧 Refatoração em andamento
+
+> **Atenção:** este projeto está passando por uma refatoração de arquitetura com fins de estudo e evolução das boas práticas de desenvolvimento em .NET.
+
+Atualmente estou migrando de uma estrutura CRUD tradicional para uma arquitetura mais organizada, aplicando conceitos como:
+
+- Clean Architecture (conceitos)
+- Use Cases
+- Repository Pattern
+- Dependency Injection
+- SOLID
+- Separação de responsabilidades
+
+Durante esse processo, algumas funcionalidades podem estar temporariamente em adaptação até que todas as rotas sejam migradas para a nova arquitetura.
+
+O objetivo desta refatoração é tornar o projeto mais escalável, organizado e alinhado às práticas utilizadas em projetos profissionais.
+
 ##  Tecnologias utilizadas
 
 - .NET 8
